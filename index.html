@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>NexumTech</title>
+</head>
+
+<body>
+  <div class="dashboard">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">
+          <img src="./img/Panterrr.png" type="image/svg+xml" class="logo-tiger">
+        </div>
+
+        <div class="brand-text">
+          <strong id="painel-text">Painel de administração</strong>
+          <span id="painel-text-two">NexumTech</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="active" href="#topo"><span class="icon">🏠</span>Inicio</a>
+        <a href="#analysis"><span class="icon">📊</span>Análise</a>
+        <a href="#usuarios"><span class="icon">👥</span>Usuários</a>
+        <a href="#configuracoes" id="openSettings"><span class="icon">⚙️</span>Configurações</a>
+      </nav>
+
+      <div class="spacer"></div>
+    </aside>
+
+    <main class="main" id="topo">
+
+      <header class="topbar">
+        <button class="hamburger" aria-label="Abrir menu">☰</button>
+      </header>
+
+
+
+
+      <section class="hero-nexum reveal">
+        <div class="hero-nexum-content">
+          <div class="hero-nexum-text">
+            <span class="hero-tag">NexumTech • Desenvolvido por Gabriel Sena</span>
+            <h1>NexumTech</h1>
+            <p>
+              Tecnologia, performance e presença visual em uma interface moderna
+              para dashboard e gestão digital.
+            </p>
+          </div>
+
+          <div class="hero-nexum-image">
+            <img src="./img/panter corposed.png" alt="Pantera NexumTech">
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <section class="hero">
+        <h1>Inteligência de Dados <span>para Empresas de Alta Performance</span></h1>
+        <div class="actions">
+          <a href="#produtos" class="btn primary">Começar Agora</a>
+          <a href="#analise" class="btn secondary">Ver Demonstração</a>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Métricas">
+        <div class="metric-card">
+          <div class="metric-top">📈 Faturamento</div>
+          <div class="metric-value" id="revenue">$12,430</div>
+          <div class="metric-sub">Últimos 30 dias</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-top">👤 Usuários Ativos</div>
+          <div class="metric-value" id="activeUsers">1,240</div>
+          <div class="metric-sub">Ativos no momento</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-top">🚀 Taxa de Crescimento</div>
+          <div class="metric-value metric-good" id="growth">+18%</div>
+          <div class="metric-sub">Mês a mês</div>
+        </div>
+      </section>
+
+      <section id="produtos" class="section" aria-label="Produtos">
+        <section class="filters-bar" aria-label="Filtros de produtos">
+          <button class="filter-btn discount" data-filter="discount">Mostrar Descontos</button>
+          <button class="filter-btn active" data-filter="all">Mostrar tudo</button>
+          <button class="filter-btn computadores" data-filter="computadores">Computadores</button>
+          <button class="filter-btn smartphone" data-filter="smartphone">Smartphone</button>
+          <button class="filter-btn audio" data-filter="audio">Áudio</button>
+          <button class="filter-btn acessorios" data-filter="acessorios">Acessórios</button>
+
+          <div class="filters-spacer"></div>
+
+          <input class="filter-search" type="search" placeholder="Buscar produto..." />
+        </section>
+
+        <section class="products-container products-grid" aria-label="Lista de produtos">
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/Smartphone.png" alt="Smartphone" /></div>
+            <div class="product-body">
+              <div class="product-title">Smartphone</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="3500">R$ 3.500</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/Notebook.png" alt="Notebook" /></div>
+            <div class="product-body">
+              <div class="product-title">Notebook</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="4000">R$ 4.000</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/Headphone.png" alt="Wireless Headphones" /></div>
+            <div class="product-body">
+              <div class="product-title">Wireless Headphones</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="200">R$ 200</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/smartwatch.png" alt="Smartwatch" /></div>
+            <div class="product-body">
+              <div class="product-title">Smartwatch</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="600">R$ 600</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/Mechanical Keyboard.png" alt="Mechanical Keyboard" /></div>
+            <div class="product-body">
+              <div class="product-title">Mechanical Keyboard</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="350">R$ 350</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/Gaming mouse.png" alt="Gaming Mouse" /></div>
+            <div class="product-body">
+              <div class="product-title">Gaming Mouse</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="150">R$ 150</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/Wireless Earbuds.png" alt="Wireless Earbuds" /></div>
+            <div class="product-body">
+              <div class="product-title">Wireless Earbuds</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="250">R$ 250</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-media"><img src="./img/4k HDR monitor.png" alt="4K HDR Monitor" /></div>
+            <div class="product-body">
+              <div class="product-title">4K HDR Monitor</div>
+              <div class="mini-chart" style="--p: 100%;">
+                <div class="mini-chart__bar" aria-hidden="true">
+                  <div class="mini-chart__fill"></div>
+                </div>
+                <div class="mini-chart__meta">
+                  <span>Preço</span>
+                  <strong class="price" data-price="2500">R$ 2.500</strong>
+                </div>
+              </div>
+              <button class="product-btn">Analisar produto</button>
+            </div>
+          </article>
+
+        </section>
+      </section>
+
+      <section id="analise" class="section analysis" aria-label="Análise">
+        <header class="section-head reveal">
+          <div>
+            <h2 class="section-title">Inteligência e Análise de Performance</h2>
+            <p class="section-subtitle">Visão geral de performance e comportamento de compras (últimos 30 dias).</p>
+          </div>
+
+          <div class="analytics-actions">
+            <div class="buttons">
+              <button class="btn primary btn-report">Gerar Relatório</button>
+              <button class="btn" onclick="baixarModeloExcel()">Exportar Dados</button>
+            </div>
+
+            <div class="insights">
+              <p class="insight-title">⚡ Insights Automáticos</p>
+              <div id="reportContent" class="insight-desc">
+                Clique em <strong>Gerar Relatório</strong> para visualizar os insights.
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="analysis-kpis">
+          <article class="kpi-card reveal">
+            <div class="kpi-top"><span class="kpi-icon">💳</span><span class="kpi-label">Conversão</span></div>
+            <div class="kpi-value" id="conversion">3.4%</div>
+            <div class="kpi-foot">+0.6% vs mês anterior</div>
+          </article>
+
+          <article class="kpi-card reveal">
+            <div class="kpi-top"><span class="kpi-icon">🛒</span><span class="kpi-label">Carrinhos</span></div>
+            <div class="kpi-value" id="carts">2,180</div>
+            <div class="kpi-foot">+12% em 30 dias</div>
+          </article>
+
+          <article class="kpi-card reveal">
+            <div class="kpi-top"><span class="kpi-icon">📦</span><span class="kpi-label">Pedidos</span></div>
+            <div class="kpi-value" id="orders">812</div>
+            <div class="kpi-foot">Ticket médio: R$ 219</div>
+          </article>
+
+          <article class="kpi-card reveal">
+            <div class="kpi-top"><span class="kpi-icon">⭐</span><span class="kpi-label">Satisfação</span></div>
+            <div class="kpi-value" id="satisfaction">4.7</div>
+            <div class="kpi-foot">Base: 324 avaliações</div>
+          </article>
+        </div>
+
+        <div id="analysis" class="analysis-grid">
+          <article class="panel-card panel-chart reveal">
+            <header class="panel-head">
+              <div>
+                <h3 class="panel-title panel-text-config">Receita por Semana</h3>
+                <p class="panel-sub">Últimas 6 semanas</p>
+              </div>
+              <span class="chip chip-good">↑ 18% crescimento</span>
+            </header>
+
+            <div class="bars" role="img" aria-label="Gráfico de barras de receita por semana">
+              <div class="bar" id="w1" style="--h:45%"><span>W1</span></div>
+              <div class="bar" id="w2" style="--h:62%"><span>W2</span></div>
+              <div class="bar" id="w3" style="--h:58%"><span>W3</span></div>
+              <div class="bar" id="w4" style="--h:70%"><span>W4</span></div>
+              <div class="bar" id="w5" style="--h:82%"><span>W5</span></div>
+              <div class="bar" id="w6" style="--h:90%"><span>W6</span></div>
+            </div>
+
+            <footer class="panel-foot">
+              <div class="mini-stat"><span class="muted">Melhor semana</span><strong id="bestWeek">Em
+                  atualização</strong></div>
+              <div class="mini-stat"><span class="muted">Pico</span><strong id="peakValue">R$ 12.430</strong></div>
+              <div class="mini-stat"><span class="muted">Meta</span><strong id="goalValue">R$ 10.000</strong></div>
+            </footer>
+          </article>
+
+          <article class="panel-card panel-wide reveal">
+            <header class="panel-head">
+              <div>
+                <h3 class="panel-title panel-text-config">Performance por Categoria</h3>
+                <p class="panel-sub">Vendas, conversão e tendência</p>
+              </div>
+              <span class="chip">Últimos 30 dias</span>
+            </header>
+
+            <div class="table-wrap" role="region" aria-label="Tabela de performance por categoria">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Categoria</th>
+                    <th>Vendas</th>
+                    <th>Conversão</th>
+                    <th>Receita</th>
+                    <th>Tendência</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="badge">Computadores</span></td>
+                    <td id="sales-computers">214</td>
+                    <td id="conv-computers">3.2%</td>
+                    <td id="rev-computers">R$ 58.900</td>
+                    <td><span class="trend up">▲</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge">Áudio</span></td>
+                    <td id="sales-audio">308</td>
+                    <td id="conv-audio">4.1%</td>
+                    <td id="rev-audio">R$ 22.740</td>
+                    <td><span class="trend up">▲</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge">Wearables</span></td>
+                    <td id="sales-wear">162</td>
+                    <td id="conv-wear">2.7%</td>
+                    <td id="rev-wear">R$ 18.320</td>
+                    <td><span class="trend mid">●</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge">Acessórios</span></td>
+                    <td id="sales-acc">128</td>
+                    <td id="conv-acc">2.1%</td>
+                    <td id="rev-acc">R$ 6.980</td>
+                    <td><span class="trend down">▼</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel-card reveal">
+            <header class="panel-head">
+              <div>
+                <h3 class="panel-title panel-text-config">Alertas</h3>
+                <p class="panel-sub">Pontos que exigem atenção</p>
+              </div>
+              <span id="alertCount">3 alertas</span>
+            </header>
+
+            <div class="alerts">
+              <div class="alert">
+                <span class="alert-ico">⚠️</span>
+                <div class="alert-txt">
+                  <strong id="alertTitle1">Abandono alto</strong>
+                  <span id="alertText1">Teste: frete + parcelamento no card.</span>
+                </div>
+              </div>
+
+              <div class="alert">
+                <span class="alert-ico">⏱️</span>
+                <div class="alert-txt">
+                  <strong id="alertTitle2">Tempo de carregamento</strong>
+                  <span id="alertText2">Ação: otimizar imagens (webp) e lazyload.</span>
+                </div>
+              </div>
+
+              <div class="alert">
+                <span class="alert-ico">🧾</span>
+                <div class="alert-txt">
+                  <strong id="alertTitle3">Conversão baixa</strong>
+                  <span id="alertText3">Ação: melhorar copy e destaque de desconto.</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="usuarios" class="section users-section" aria-label="Usuários">
+        <header class="section-head users-head reveal">
+          <div>
+            <h2 class="section-title">Gestão de Usuários</h2>
+            <p class="section-subtitle">Acompanhe usuários ativos, novos cadastros e status da plataforma.</p>
+          </div>
+        </header>
+
+        <div class="users-grid">
+          <article class="panel-card reveal">
+            <header class="panel-head">
+              <div>
+                <h3 class="panel-title">Usuários Cadastrados</h3>
+                <p class="panel-sub">Base geral da plataforma</p>
+              </div>
+            </header>
+            <div class="kpi-value">1.240</div>
+          </article>
+
+          <article class="panel-card reveal">
+            <header class="panel-head">
+              <div>
+                <h3 class="panel-title">Novos Usuários</h3>
+                <p class="panel-sub">Últimos 30 dias</p>
+              </div>
+            </header>
+            <div class="kpi-value">+184</div>
+          </article>
+
+          <article class="panel-card reveal">
+            <header class="panel-head">
+              <div>
+                <h3 class="panel-title">Usuários Premium</h3>
+                <p class="panel-sub">Contas com maior ticket</p>
+              </div>
+            </header>
+            <div class="kpi-value">312</div>
+          </article>
+        </div>
+
+        <article class="panel-card users-table-card reveal">
+          <header class="panel-head">
+            <div>
+              <h3 class="panel-title panel-text-config">Lista de Usuários</h3>
+              <p class="panel-sub">Exemplo visual para dashboard</p>
+            </div>
+          </header>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Status</th>
+                  <th>Plano</th>
+                  <th>Último acesso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gabriel Sena</td>
+                  <td><span class="badge">Ativo</span></td>
+                  <td>Premium</td>
+                  <td>Hoje, 14:32</td>
+                </tr>
+                <tr>
+                  <td>Ana Clara</td>
+                  <td><span class="badge">Ativo</span></td>
+                  <td>Business</td>
+                  <td>Hoje, 13:10</td>
+                </tr>
+                <tr>
+                  <td>João Pedro</td>
+                  <td><span class="badge">Pendente</span></td>
+                  <td>Free</td>
+                  <td>Ontem, 22:05</td>
+                </tr>
+                <tr>
+                  <td>Maria Oliveira</td>
+                  <td><span class="badge">Ativo</span></td>
+                  <td>Premium</td>
+                  <td>Hoje, 09:18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+
+
+
+      <footer class="footer reveal-footer">
+        <div class="footer-content">
+
+          <div class="footer-left">
+            <h3>NexumTech</h3>
+            <p id="text-decoration">Powered by Gabriel Sena</p>
+          </div>
+
+          <div id="footer-text" class="footer-center">
+            <a id="footer-text" href="#topo">Inicio</a>
+            <a id="footer-text" href="https://github.com/SrGabriel-KL">GitHub</a>
+            <a id="footer-text" href="https://github.com/SrGabriel-KL?tab=repositories">Projetos</a>
+            <a id="footer-text" href="https://www.linkedin.com/in/gabriel-sena-kl/">Linkedin</a>
+
+          </div>
+
+          <div class="footer-right">
+            <p>© 2026 NexumTech</p>
+          </div>
+
+        </div>
+      </footer>
+
+    </main>
+
+
+  </div>
+
+  <div class="settings-popup" id="settingsPopup">
+    <div class="settings-popup-content">
+      <button class="close-settings" id="closeSettings">✕</button>
+
+      <h2 id="title-config" class="section-title">Configurações do Sistema</h2>
+      <p class="section-subtitle">
+        Gerencie preferências, alertas e segurança da plataforma.
+      </p>
+
+      <div class="settings-stack">
+
+
+        <article class="panel-card">
+          <h3 class="panel-title panel-text-config">Notificações</h3>
+          <p id="panel-text" class="panel-sub">Ative relatórios e alertas automáticos.</p>
+          <button id="button-notifications" class="product-btn">Configurar alertas</button>
+        </article>
+
+        <article class="panel-card">
+          <h3 class="panel-title panel-text-config">Exportação</h3>
+          <p id="panel-text" class="panel-sub">Baixe relatórios da plataforma.</p>
+          <button class="product-btn" onclick="baixarModeloExcel()">
+            Exportar agora
+          </button>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-modal" id="productModal">
+    <div class="product-modal-content">
+      <button class="close-modal" onclick="closeProductModal()">✕</button>
+
+      <h2 id="modalProductTitle">Produto</h2>
+
+      <div class="modal-stats">
+        <div class="modal-stat">
+          <span>Vendas</span>
+          <strong id="modalSales">0</strong>
+        </div>
+
+        <div class="modal-stat">
+          <span>Receita</span>
+          <strong id="modalRevenue">R$ 0</strong>
+        </div>
+
+        <div class="modal-stat">
+          <span>Conversão</span>
+          <strong id="modalConversion">0%</strong>
+        </div>
+      </div>
+
+      <div class="modal-chart">
+        <div class="modal-bars">
+          <div class="modal-bar" id="modalBar1"><span>S1</span></div>
+          <div class="modal-bar" id="modalBar2"><span>S2</span></div>
+          <div class="modal-bar" id="modalBar3"><span>S3</span></div>
+          <div class="modal-bar" id="modalBar4"><span>S4</span></div>
+          <div class="modal-bar" id="modalBar5"><span>S5</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./products.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
